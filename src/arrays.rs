@@ -22,4 +22,8 @@ pub fn run() {
 
   // Get memory occupied by array (in this case its 20 bytes) [each entry is 4 bytes]
   println!("Array occupies {} bytes ", mem::size_of_val(&numbers));
+
+  // Get slice (return including starting to not-including index)
+  let slice: &[i32] = &numbers[0..2]; // returns [1, 2] array
+  println!("Slice: {:?}", slice);
 }

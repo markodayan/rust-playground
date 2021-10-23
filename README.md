@@ -27,6 +27,29 @@ let a = 'a';
 - Tuples group together values of different types <u>(Max 12 elements)</u>
 - Arrays are <u>fixed</u>. Fixed in length and types.
 - Arrays are stack-allocated
+- Vectors are re-sizable arrays
+- Conditionals are used to check the condition of something and act on the result (analogous to if statements)
+- Loops are used to iterate until a condtion is met
+- Reference pointers point to a resource in memory
+- With <b>non-primitives</b>, if you assign another variale to a piece of data, <u>the first variable will no longer hold that value</u>. You will need to use a reference (&) to point to the resource
+
+```rust
+  // This will fail - you need to instead make a reference
+  let vec1 = vec![1,2,3];
+  let vec2 = vec1;
+  println!("Values: {:?}", (vec1, vec2));
+```
+
+Correct way (creating a reference):
+
+```rust
+  let vec1 = vec![1,2,3];
+  let vec2 = &vec1;
+  println!("Values: {:?}", (&vec1, vec2));
+```
+
+- Structs are ued to make custom data types
+- Enums are types which have a few discrete definitive values
 
 ## Rust Primitive Types
 
@@ -62,3 +85,5 @@ cargo build --release
 ```
 
 ---
+
+## Cargo Command Line Arguments
